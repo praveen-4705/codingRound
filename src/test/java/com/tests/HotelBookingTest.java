@@ -1,9 +1,11 @@
+package com.tests;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class HotelBookingTest extends BaseTest{
+public class HotelBookingTest extends BaseTest {
 
     @FindBy(linkText = "Hotels")
     private WebElement hotelLink;

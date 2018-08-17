@@ -1,3 +1,5 @@
+package com.tests;
+
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +23,7 @@ public class BaseTest {
         driver.get().get("https://www.cleartrip.com/");
     }
 
-    @AfterMethod(alwaysRun=true)
+    @AfterMethod(alwaysRun = true)
     public void tearDown(ITestResult result) {
         // Close the driver
         getDriver().quit();

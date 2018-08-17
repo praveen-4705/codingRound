@@ -1,3 +1,5 @@
+package com.tests;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -6,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class FlightBookingTest extends BaseTest{
+public class FlightBookingTest extends BaseTest {
 
     @Test
     public void testThatResultsAppearForAOneWayJourney() {
