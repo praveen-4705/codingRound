@@ -7,9 +7,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
 import java.util.List;
 
+/* Page object with locators and methods for Hotels page. */
 public class HotelsPage extends BasePage {
 
     @FindBy(id = "Tags")
@@ -35,6 +35,7 @@ public class HotelsPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    /** Search for flights with {@code location} and {@code travellers}. */
     public void searchForHotels(String location, String travellers) {
         new Actions(driver).sendKeys(localityTextBox, location).perform();
         waitFor(2000);

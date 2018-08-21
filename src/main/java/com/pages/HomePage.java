@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.List;
 
+/** Page object with locators and methods for Home page. */
 public class HomePage extends BasePage {
 
     @FindBy(linkText = "Your trips")
@@ -39,16 +39,19 @@ public class HomePage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
+    /**Navigates to Sign In page. */
     public SignInPage navigateToSignInPage() {
         yourTrips.click();
         return new SignInPage(driver);
     }
 
+    /** Navigates to hotel page. */
     public HotelsPage navigateToHotelsPage() {
         hotelLink.click();
         return new HotelsPage(driver);
     }
 
+    /** Search for flights with {@code fromLocation} and {@code toLocation}. */
     public void searchForFlights(String fromLocation, String toLocation) {
         fromStation.clear();
         fromStation.sendKeys(fromLocation);

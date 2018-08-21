@@ -46,9 +46,7 @@ public class BaseTest {
         return driver.get();
     }
 
-    /**
-     * Gets the screenshot.
-     */
+    /** Gets the screenshot.*/
     private static void getScreenshot(WebDriver driver, String screenshotName) {
         File sourceFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String destinationPath = "./test-output/" + screenshotName + ".jpeg";

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/** Page object with locators and methods that are common for all pages of ClearTrip application. */
 public class BasePage {
 
     public static String AUTO_COMPLETE_XPATH = "//ul[@class = 'autoComplete'][contains(@style, 'display: block')]/li/a";
@@ -16,6 +17,7 @@ public class BasePage {
         this.driver = driver;
     }
 
+    /** Waits for the provided {@code durationInMilliSeconds}.*/
     void waitFor(int durationInMilliSeconds) {
         try {
             Thread.sleep(durationInMilliSeconds);
@@ -24,12 +26,14 @@ public class BasePage {
         }
     }
 
+    /** Waits for the element to be present and visible*/
     WebElement waitForElement(By by) {
         WebDriverWait wait = new WebDriverWait(driver, 60);
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
+    /** Returns true if the element is present. */
     public boolean isElementPresent(By by) {
         return !driver.findElements(by).isEmpty();
     }
