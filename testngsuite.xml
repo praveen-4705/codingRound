@@ -1,6 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="ClearTripSuite" verbose="1">
+    <listeners>
+        <listener class-name="com.utils.ReportListener"/>
+    </listeners>
+
     <test name="Sign In Test">
         <classes>
             <class name="com.tests.SignInTest"/>
