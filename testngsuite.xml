@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ClearTripSuite" verbose="1">
+    <test name="Sign In Test">
+        <classes>
+            <class name="com.tests.SignInTest"/>
+        </classes>
+    </test>
+
+    <test name="Searh Hotels Test">
+        <classes>
+            <class name="com.tests.HotelBookingTest"/>
+        </classes>
+    </test>
+
+    <test name="Search Flights Test">
+        <classes>
+            <class name="com.tests.FlightBookingTest"/>
+        </classes>
+    </test>
+</suite>
