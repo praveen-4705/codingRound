@@ -38,7 +38,7 @@ public class HotelsPage extends BasePage {
     public void searchForHotels(String location, String travellers) {
         new Actions(driver).sendKeys(localityTextBox, location).perform();
         waitFor(2000);
-        waitForElement(By.xpath("//ul[@class = 'autoComplete']/li/a")).click();
+        waitForElement(By.xpath(AUTO_COMPLETE_XPATH)).click();
         checkInDate.click();
         waitFor(2000);
         selectDay.get(1).click();

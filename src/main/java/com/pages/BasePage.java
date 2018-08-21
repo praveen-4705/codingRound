@@ -8,13 +8,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
-    protected WebDriver driver;
+    public static String AUTO_COMPLETE_XPATH = "//ul[@class = 'autoComplete'][contains(@style, 'display: block')]/li/a";
+
+    WebDriver driver;
 
     BasePage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void waitFor(int durationInMilliSeconds) {
+    void waitFor(int durationInMilliSeconds) {
         try {
             Thread.sleep(durationInMilliSeconds);
         } catch (InterruptedException e) {
@@ -22,7 +24,7 @@ public class BasePage {
         }
     }
 
-    public WebElement waitForElement(By by) {
+    WebElement waitForElement(By by) {
         WebDriverWait wait = new WebDriverWait(driver, 60);
         wait.until(ExpectedConditions.presenceOfElementLocated(by));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
