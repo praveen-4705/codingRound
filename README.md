@@ -6,7 +6,7 @@ About the codebase:
 
 **Tech Stack:** *Java*  *Selenium* *TestNG*  *Gradle/Maven*
 
-Problem Statement
+Problem Statements
 ----------------------------------
 **Tasks:**
 
